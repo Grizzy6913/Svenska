@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nordiska Språk – Studieguide</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">🌍 Nordiska Språk</div>
+      <nav class="main-nav">
+        <button class="nav-btn active" data-section="overview">Översikt</button>
+        <button class="nav-btn" data-section="flashcards">Flashkort</button>
+        <button class="nav-btn" data-section="quiz">Öva</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- OVERVIEW -->
+  <section id="overview" class="section active">
+    <div class="hero">
+      <span class="hero-tag">Geografi & Språk</span>
+      <h1>Språk i Norden</h1>
+      <p class="hero-sub">Släktskap, historia och minoriteter i Skandinavien</p>
+    </div>
+
+    <div class="container">
+      <div class="overview-grid" id="overview-grid"></div>
+    </div>
+  </section>
+
+  <!-- FLASHCARDS -->
+  <section id="flashcards" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Flashkort</h2>
+        <p>Klicka på ett kort för att vända det och se svaret.</p>
+      </div>
+      <div class="filter-row">
+        <button class="filter-btn active" data-filter="all">Alla</button>
+        <button class="filter-btn" data-filter="easy">Enkla</button>
+        <button class="filter-btn" data-filter="hard">Svåra</button>
+      </div>
+      <div class="cards-grid" id="cards-grid"></div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Öva</h2>
+        <p>Svara på frågorna – du behöver inte vara perfekt, ~90% räcker.</p>
+      </div>
+      <div class="quiz-controls">
+        <button class="filter-btn active" data-diff="all">Alla</button>
+        <button class="filter-btn" data-diff="easy">Enkla</button>
+        <button class="filter-btn" data-diff="hard">Svåra</button>
+      </div>
+
+      <div class="quiz-progress">
+        <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+        <span class="progress-label" id="prog-label">Fråga 1 av 15</span>
+        <span class="score-label" id="score-label">Poäng: 0</span>
+      </div>
+
+      <div class="quiz-card" id="quiz-card">
+        <p class="quiz-question" id="quiz-q"></p>
+        <div class="hint-box" id="hint-box"></div>
+        <div class="result-box" id="result-box"></div>
+        <input type="text" class="quiz-input" id="quiz-input" placeholder="Skriv ditt svar…" autocomplete="off" />
+        <div class="quiz-actions" id="quiz-actions">
+          <button class="btn-primary" id="btn-answer">Svara</button>
+          <button class="btn-ghost" id="btn-hint">Ledtråd</button>
+          <button class="btn-ghost" id="btn-next">Nästa</button>
+          <button class="btn-ghost" id="btn-skip">Hoppa över</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
